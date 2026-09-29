@@ -1,0 +1,15 @@
+{
+  "members": [
+    "DuongQuangHiep_c",
+    "KieuQuocHieu_a",
+    "NghiemVietQuan_b"
+  ],
+  "assignments": {
+    "DuongQuangHiep_c": "B3-mid",
+    "KieuQuocHieu_a": "B1-mid",
+    "NghiemVietQuan_b": "B3-edge"
+  },
+  "self": "KieuQuocHieu_a",
+  "slice": "B1-mid",
+  "degrade": []
+}
