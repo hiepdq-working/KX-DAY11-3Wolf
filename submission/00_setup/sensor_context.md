@@ -1,6 +1,5 @@
 # Sensor context
 
-- TODO — Rig: mô tả ngắn xe/camera gắn ở đâu theo hiểu biết của bạn từ ảnh (ADASIND không kèm tài liệu rig chi
-  tiết, ghi theo quan sát).
-- TODO — `ego_body` nhìn thấy ở đâu trong frame (góc capo, gương, tay lái...).
-- TODO — Vòng kính (lens circle) nằm ở vị trí nào trong ảnh, chiếm khoảng bao nhiêu phần khung hình.
+- Rig: một camera fisheye duy nhất nhìn về phía trước, gắn trên **xe hai bánh** (quan sát thấy tay, tay lái, chân người lái và bóng người lái trên mặt đường ở đáy ảnh). Ảnh dọc 1080×1920. Vị trí gắn chính xác (mũ bảo hiểm, ngực hay tay lái), chiều cao và calibration **không có trong dữ liệu**; ghi theo quan sát. Đây chỉ là một camera, không đại diện cho front/rear/left/right của rig SVM bốn camera.
+- `ego_body` nhìn thấy ở **góc dưới trái** vòng kính trong phần lớn frame: cánh tay/bàn tay người lái, tay lái, đầu gối/chân, đôi khi bàn chân ở đáy vòng kính (vd `adasind_060000`, `adasind_123090`, `adasind_236370`). Bóng người lái trên mặt đường **không** phải ego body. Frame `adasind_006840` và `adasind_271039` không thấy thân xe/người lái nên không vẽ polygon `ego_body`.
+- Vòng kính gần tròn, tâm hơi lệch lên trên giữa khung; đường kính gần bằng chiều rộng ảnh nên hai bên trái/phải bị khung cắt, còn trên (~y 120) và dưới (~y 1650–1700) có dải đen. Vùng ngoài vòng kính (đen) chiếm khoảng 15–20% điểm ảnh (đo nhanh trên `adasind_001320` được ~17%). Méo mạnh ở rìa vòng: đường thẳng (cột điện, mép đường) cong, vật ở rìa bị kéo giãn/cắt bởi vòng kính → cần `truncated`, không phải `occluded`.

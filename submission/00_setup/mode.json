@@ -6,10 +6,10 @@
   ],
   "assignments": {
     "DuongQuangHiep_c": "B3-mid",
-    "KieuQuocHieu_a": "B1-mid",
+    "KieuQuocHieu_a": "B2-dense",
     "NghiemVietQuan_b": "B3-edge"
   },
   "self": "KieuQuocHieu_a",
-  "slice": "B1-mid",
+  "slice": "B2-dense",
   "degrade": []
 }

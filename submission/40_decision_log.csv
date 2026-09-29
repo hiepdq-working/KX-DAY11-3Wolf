@@ -1,1 +1,8 @@
 id,date,question,decision,rationale,status
+D1,2026-09-28,C0 019560: xe ba bánh đỏ + xích lô mui xám là 1 hay 2 box?,"Giữ 2 box (L2, L3); không sửa theo reference R5","R02/R04: mui và bánh riêng nhìn thấy; R5 kéo tới hàng rào gỗ (x 427→457). Luật chưa phân xử → Ticket 2, screenshots/p1_019560_cycle_rickshaw.png",escalated
+D2,2026-09-28,B2 062370 L6: ThreeWheeler hay Truck?,"Sửa thành Truck, box (316,738,410,822)","Ảnh mui phẳng/thùng vuông; R8=Truck; QA P3 đã nghi. Rework P5, delta center matched 11→12. screenshots/p4_062370_L6_truck.png",done
+D3,2026-09-28,B2 069450 L6: xe đẩy bán hàng có box ThreeWheeler?,Xoá box,"Không thấy bàn đạp/bánh thứ ba; R và M đều không box; ngoài 6 class (R04). Rework P5, delta mid spurious 2→1",done
+D4,2026-09-28,B2 117120 L3 (xe ba bánh sẫm) và L7 (người đi bộ) bị reference bỏ sót: xoá theo reference?,Giữ cả hai; báo reference sai,"Cao 65 px và 60 px ≥ H, nhìn rõ trên ảnh; E0_reference_defect → Ticket 3, screenshots/p4_117120_ref_gaps.png",escalated
+D5,2026-09-28,Model gọi xe ba bánh là Truck và tách rider: có sửa nhãn người theo model?,"Không; nhãn L/R giữ, chuyển ai_team","Lặp 6/6 xe ba bánh + 3 rider trong slice; E4_model_domain có nhiều ca → Ticket 1, screenshots/p4_062370_model_truck.png",escalated
+D6,2026-09-28,B2 117120 L9: xe con cao 43 px bị tính spurious vì R4 cao 39 px,Giữ box; đề xuất vùng đệm H ± 3,"Cùng vật, cùng class; chỉ lệch mép trên 5 px quanh ngưỡng H. R01b trong 20_guideline_patch.md",keep_with_reason
+D7,2026-09-28,Export ở mức job thiếu tên task (self-QC báo thiếu raw_fisheye),Export ở mức task cho r1_craft và rework; giữ khoá C0 đã có,Nội dung nhãn giống hệt (task một job); lock r1_craft 0F80-5CA9 dùng bản export mức task. Không mở khoá C0 vì không đổi nhãn,done

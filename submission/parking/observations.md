@@ -1,6 +1,6 @@
 # Quan sát vạch ô đỗ
 
-- Hai vạch `parking_line` đã vẽ (mô tả vị trí trong ảnh): TODO
-- Một vạch/dấu sơn hoặc biên **không** vẽ, và vì sao: TODO
-- Polygon `free_space` dừng ở đâu; có phần bị che nào không: TODO
-- Ca chưa chắc cần hỏi người soát (nếu không có, ghi “không có”): TODO
+- Hai vạch `parking_line` đã vẽ (mô tả vị trí trong ảnh): (1) vạch chéo trắng ở **tiền cảnh giữa-dưới** (≈ x 403→538, y 653→719), chạy tới mép dưới ảnh; (2) vạch chéo ở **tiền cảnh bên phải** (≈ x 695→958, y 624→683), chạy tới mép phải. Hai vạch song song, cách nhau một bề rộng ô nên mỗi vạch là ranh giới giữa hai ô đỗ kề nhau. Vẽ thêm (3) một vạch chia ô ở **dãy giữa, bên trái tâm** (≈ x 173→248, y 523→563). Mỗi polyline dừng ở chỗ sơn kết thúc hoặc mép ảnh, không kéo dài phần không thấy.
+- Một vạch/dấu sơn hoặc biên **không** vẽ, và vì sao: vạch trắng **dài chạy ngang gần như suốt bãi** ở dãy giữa (≈ y 515–545, từ mép trái sang phải). Nó nối đầu các ô lại và chạy dọc theo lối xe, nên là biên cuối dãy/biên lối xe chạy, không chia hai ô riêng → không phải `parking_line`. Cũng không vẽ các vạch ở xa gần hàng rào (mảnh, mờ, không xác định được ô) và vạch dọc bị cắt ở góc dưới trái (chỉ thấy một đoạn ngắn, không rõ ô nào).
+- Polygon `free_space` dừng ở đâu; có phần bị che nào không: polygon phủ **lối xe chạy trống giữa đầu các vạch dãy giữa (≈ y 560–580) và đầu các vạch tiền cảnh (≈ y 620–668)**, từ x ≈ 70 tới x ≈ 955. Không đi vào các ô đỗ, không chạm xe đỏ ở xa, hàng rào hay cây. Trong đoạn này không có vật che; đây chỉ là mặt đường nhìn thấy trên một ảnh tĩnh, không phải vùng lái xe an toàn.
+- Ca chưa chắc cần hỏi người soát (nếu không có, ghi “không có”): vạch dọc ngắn bên trái (≈ x 48–60, y 522–572) có thể là vạch chia ô cuối dãy hoặc biên lối xe; và ranh giới xa của `free_space` ở bên phải (≈ x 900–955) nằm sát một vạch tiền cảnh bị cắt bởi mép ảnh. Cần người soát xác nhận.

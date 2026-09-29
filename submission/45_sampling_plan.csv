@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,28,medium,"Camera trước thấy nhiều object nhất khi xe chạy (xe, người, xe hai bánh ở xa-gần); cần đủ ca thường để đo độ phủ cơ bản của class động."
+front,hard,32,high,"Hard: vật nhỏ/xa, đám đông dày, người dắt xe vs rider, ngược sáng và vật bị cắt ở rìa vòng kính; lỗi thiếu box ở đây ảnh hưởng trực tiếp phanh/cảnh báo phía trước."
+rear,normal,20,medium,"Camera sau chủ yếu dùng khi lùi/đỗ; cảnh ít đa dạng hơn nên ca thường cần ít hơn front."
+rear,hard,26,high,"Hard: lùi vào ô đỗ tối/ban đêm, người/trẻ em thấp sát cản sau, ego body (cản, móc kéo) chiếm đáy ảnh dễ bị gán nhầm thành object."
+left,normal,20,medium,"Camera bên nhìn làn kề và lề đường; ca thường để kiểm class và geometry trong vùng giữa ảnh."
+left,hard,27,high,"Hard: vật sát thân xe bị méo mạnh ở rìa, vùng seam với front/rear (vật xuất hiện trên hai camera), gương/thân xe che, curb và vạch ô đỗ bên hông."
+right,normal,20,medium,"Đối xứng với left; giữ cùng số ca thường để so sánh chất lượng hai bên."
+right,hard,27,high,"Hard: như left — méo rìa, seam góc trước/sau phải, xe máy vượt sát bên, vạch ô đỗ khi đỗ song song."

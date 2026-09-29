@@ -1,0 +1,8 @@
+frame,type,left,reference,left_label,reference_label,iou
+adasind_062370.jpg,mismatching_label,6,8,ThreeWheeler,Truck,0.629
+adasind_062370.jpg,missing_annotation,,7,,ThreeWheeler,N/A
+adasind_069450.jpg,mismatching_attributes,2,1,ThreeWheeler,ThreeWheeler,0.912
+adasind_069450.jpg,extra_annotation,6,,ThreeWheeler,,N/A
+adasind_117120.jpg,extra_annotation,3,,ThreeWheeler,,N/A
+adasind_117120.jpg,extra_annotation,7,,Pedestrian,,N/A
+adasind_117120.jpg,extra_annotation,9,,Car,,N/A
